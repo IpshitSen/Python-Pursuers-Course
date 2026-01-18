@@ -1,0 +1,28 @@
+import random
+num = [1,2,3,4,5,6,7,8,9,10]
+value = random.choice(num)
+i = 0
+guess = None
+print("********NUMBER GUESSING GAME********")
+while(value != guess and i < 4):
+    if i==3:
+        print("********GAME OVER********")
+        break
+    guess = int(input("Enter Your guess(1-10) : "))
+    if value == guess:
+        print("********YOU WON********")
+        
+        break
+    elif guess>10 or guess<1 :
+        print("Please enter a valid value(1-10)")
+        continue
+    else:
+        i+=1 
+        print("Wrog guess")
+        print(f"Tries left : {3-i}")
+        
+              
+
+
+
+
